@@ -1,0 +1,40 @@
+body::before {
+    display: block;
+    content: '';
+    height: 60px;
+}
+@media(min-width: 768px) {
+    .news-input {
+        width: 50%;
+    }
+}
+@media(max-width: 768px) {
+    #boxes,
+    #learn
+    #questions {
+        padding: 1rem !important;
+    }
+}
+/*Underline Animation Code with no conflict with Bootstrap*/
+.nav-item a {
+    position: relative;
+    overflow: hidden;
+}
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.20rem;
+    background-color: #0d6efd;
+    opacity: 0;
+    transition: transform 0.4s;
+    transform: translate3d(-100%, 0, 0);
+}
+.nav-item a:hover::after {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
