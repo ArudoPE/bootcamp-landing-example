@@ -1,20 +1,10 @@
+/*SHARED*/
 body::before {
     display: block;
     content: '';
     height: 60px;
 }
-@media(min-width: 768px) {
-    .news-input {
-        width: 50%;
-    }
-}
-@media(max-width: 768px) {
-    #boxes,
-    #learn
-    #questions {
-        padding: 1rem !important;
-    }
-}
+
 /*Underline Animation Code with no conflict with Bootstrap*/
 .nav-item a {
     position: relative;
@@ -35,6 +25,20 @@ body::before {
 .nav-item a:hover::after {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+}
+
+/*MEDIA QUERIES*/
+@media(min-width: 768px) {
+    .news-input {
+        width: 50%;
+    }
+}
+@media(max-width: 768px) {
+    #boxes,
+    #learn
+    #questions {
+        padding: 1rem !important;
+    }
 }
 
 
