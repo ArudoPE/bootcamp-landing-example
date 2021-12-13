@@ -40,7 +40,8 @@
         fixed-top">
             <div class="container">
                 <a href="#" class="navbar-brand">Frontend Bootcamp by Aldo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse">
@@ -63,6 +64,35 @@
                     </ul>
                 </div>
             </div>
+            <!-- Off Canvas Menu -->
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-body">
+                <div class="offcanvas-header bg-dark text-white">
+                    <h5 id="offcanvasRightLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item fw-bold">
+                        <a href="./index.html" class="nav-link active">Inicio</a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#learn" class="nav-link">Qué vas a aprender</a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#questions" class="nav-link">Preguntas</a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#instructors" class="nav-link">Instructores</a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#contact" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
         </nav>
     </header>
     <main>

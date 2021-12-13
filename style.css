@@ -102,6 +102,17 @@ body::before {
 }
 
 /*MEDIA QUERIES*/
+
+/*Hide OffCanvasMenu*/
+@media(min-width: 992px) {
+    #offcanvasRight {
+        display: none;
+    }
+    .nav-item a {
+        text-decoration: underline !important;
+        text-decoration-color: #0d6efd !important;
+    }
+}
 @media(min-width: 768px) {
     .news-input {
         width: 50%;
