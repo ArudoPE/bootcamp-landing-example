@@ -2,7 +2,7 @@
 body::before {
     display: block;
     content: '';
-    height: 60px;
+    height: 50px;
 }
 
 /*Underline Animation Code with no conflict with Bootstrap*/
@@ -10,6 +10,7 @@ body::before {
     position: relative;
     overflow: hidden;
 }
+
 .nav-item a::after {
     content: '';
     position: absolute;
@@ -22,9 +23,82 @@ body::before {
     transition: transform 0.4s;
     transform: translate3d(-100%, 0, 0);
 }
+
 .nav-item a:hover::after {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+}
+
+/* Special h2 footer animation*/
+.p-footer-animation {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: animtext 4s steps(80, end);
+    transition: all cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    animation-iteration-count: infinite;
+}
+
+@keyframes animtext {
+    from {
+        width: 0;
+        transition: all 2s ease-in-out;
+    }
+}
+
+/* Special Social Media Icons on footer animation*/
+.social-media-footer a i:hover::before {
+    animation: spinAround 2s linear infinite !important;
+}
+
+@-webkit-keyframes spinAround {
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spinAround {
+    from {
+        -moz-transform: rotate(0deg)
+    }
+
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@keyframes spinAround {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*Footer go up arrow animation*/
+.arrow-go-up a i {
+    border-radius: 50%;
+    animation: pulse 2s infinite !important;
+}
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 #0d6efd;
+        box-shadow: 0 0 0 0 #0d6efd;
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(35, 1, 225, 0);
+        box-shadow: 0 0 0 10px rgba(35, 1, 225, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(65, 44, 204, 0);
+        box-shadow: 0 0 0 0 rgba(65, 44, 204, 0);
+    }
 }
 
 /*MEDIA QUERIES*/
@@ -33,12 +107,16 @@ body::before {
         width: 50%;
     }
 }
+
 @media(max-width: 768px) {
+
     #boxes,
-    #learn
-    #questions {
+    #learn #questions {
         padding: 1rem !important;
     }
+
+    #contact-map iframe {
+        max-width: 300px;
+        max-height: 225px;
+    }
 }
-
-
